@@ -26,12 +26,13 @@ public class Fraction {
         
         private int gcd(int a, int b) {
             //* Helper method to calculate the greatest common divisor
+            //? Using Euclidean algorithm
             
             return b == 0 ? a : gcd(b, a % b);
         }
         
         public Fraction add(Fraction other) {
-            //* Unused Fraction method, but kept for reference
+            //* Add two fractions
             //? a/b + c/d = (ad + bc) / bd 
 
             int newNumerator = this.numerator * other.denominator + other.numerator * this.denominator;
@@ -40,6 +41,7 @@ public class Fraction {
         }
         
         public Fraction subtract(Fraction other) {
+            //* Subtract two fractions
             //? a/b - c/d = (ad - bc) / bd
 
             int newNumerator = this.numerator * other.denominator - other.numerator * this.denominator;
@@ -48,6 +50,7 @@ public class Fraction {
         }
         
         public Fraction multiply(Fraction other) {
+            //* Multiply two fractions
             //? a/b * c/d = (ac) / (bd)
 
             int newNumerator = this.numerator * other.numerator;
@@ -56,6 +59,7 @@ public class Fraction {
         }
         
         public Fraction divide(Fraction other) {
+            //* Divide two fractions
             //? a/b / c/d = (ad) / (bc)
 
             if (other.numerator == 0) {
@@ -67,7 +71,8 @@ public class Fraction {
         }
         
         public double doubleValue() {
-            //? Convert the fraction to a double value
+            //* Convert the fraction to a double value
+            
             return (double) numerator / denominator;
         }
         
